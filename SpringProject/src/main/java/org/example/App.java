@@ -17,7 +17,8 @@ public class App
         Dev dev = (Dev) context.getBean("dev");
         dev.compile();
 
-        Laptop laptop = (Laptop) context.getBean("laptop");
-        laptop.compile();
+//        Laptop laptop = (Laptop) context.getBean("lap");
+//        laptop.compile();
+//        System.out.println(laptop.version);
     }
 }
