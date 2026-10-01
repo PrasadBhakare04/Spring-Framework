@@ -3,12 +3,23 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "dev" class = "org.example.Dev">
-        <property name="laptop" ref="lap"/>
+    <bean id = "dev" class = "org.example.Dev" autowire="byName">
+<!--        <property name="laptop" ref="lap"/>-->
+
+<!--        <property name="computer" ref="lap"/>-->
+
+<!--        as name of the property and id it is referring to is same-->
+<!--        we can use autowiring-->
+<!--        <property name="com" ref="com"/>-->
+
     </bean>
 
     <bean id = "lap" class = "org.example.Laptop">
         <property name="version" value="50"/>
 <!--        <constructor-arg index="0" value="50"/>-->
     </bean>
+
+    <bean id="com" class="org.example.Desktop">
+    </bean>
+
 </beans>
